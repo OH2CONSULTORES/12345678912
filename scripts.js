@@ -15,17 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Verificar el tamaño de la pantalla al cargar y redimensionar
-    //function checkScreenSize() {
-       // const mq = window.matchMedia("(min-width: 768px)");
+    function checkScreenSize() {
+        const mq = window.matchMedia("(min-width: 768px)");
         
-      //  if (mq.matches) {
+        if (mq.matches) {
             // Cambiar automáticamente las imágenes cada intervalTime en pantallas grandes
-       //     setInterval(changeBackground, intervalTime);
-       // } else {
+            setInterval(changeBackground, intervalTime);
+        } else {
             // Mantener una sola imagen fija en pantallas pequeñas
             hero.style.backgroundImage = `url('${images[0]}')`;
-        //}
-    //}
+        }
+    }
 
     // Llamar a la función al cargar la página y al cambiar el tamaño de la pantalla
     checkScreenSize();
